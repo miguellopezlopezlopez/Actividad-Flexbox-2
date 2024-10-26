@@ -1,0 +1,163 @@
+/* Estilos generales */
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../img/paven.png");
+}
+
+a {
+  color: #529125;
+}
+
+a:hover {
+  color: #285616;
+}
+
+/* Cabecera */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  background-color: #f2f3f2;
+}
+
+#logotipo img {
+  width: 10vw;
+  max-width: 8.75rem;
+}
+
+/* Menú */
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: white;
+  padding: 1rem;
+}
+
+/* Contenedor principal */
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  padding: 2vw;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+/* Barra lateral */
+#aside {
+  flex: 1 1 15%;
+  max-width: 20vw;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 0.2rem #ccc;
+}
+
+#aside h3 {
+  text-align: center;
+  background-color: #f2f3f2;
+  padding: 0.5rem;
+  border-bottom: 0.1rem solid #ccc;
+}
+
+/* Botones y Formularios en la Barra Lateral */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+button {
+  width: 100%;
+  background-color: #70b231;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Secciones */
+#sections {
+  flex: 3 1 70%;
+}
+
+#sections .titulo {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#sections section {
+  background-color: white;
+  padding: 1rem;
+  border: 0.1rem solid #ccc;
+  box-shadow: 0 0 0.4rem #c9c9c9;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+  font-size: 0.875rem;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  #aside {
+    flex: 1 1 20%;
+    max-width: 25vw;
+  }
+  #sections {
+    flex: 1 1 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  #aside,
+  #sections {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  #aside, #sections {
+    padding: 2vw;
+  }
+}
